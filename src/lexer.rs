@@ -16,5 +16,15 @@ pub struct Lexer {
 impl lexer() {
   pub fn new(inputstr: &str) -> Self {
     let inpvec: Vec<char> = inputstr.chars().collect();
+    let first_ch = if !inpvec.is_empty() { inpvec[0] } else { '\0' };
+
+    Lexer {
+      input: inpvec,
+      position: 0,
+      ch: first_ch,
+    }
+  }
+  pub fn next_token(&mut self) -> Token {
+
   }
 }
