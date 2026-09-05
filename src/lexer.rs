@@ -36,10 +36,12 @@ impl Lexer {
     }
   }
   pub fn next_token(&mut self) -> Token {
-    match self.ch {
-      ' ' => {
-        if self.strmode {
-          
+    if self.strmode {
+      
+    } else {
+    
+      match self.ch {
+        ' ' => {
         }
       }
     }
